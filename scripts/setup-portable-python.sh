@@ -59,7 +59,7 @@ mkdir -p "${ROOT_DIR}/src-tauri/resources"
 rm -rf "${TARGET_DIR}"
 
 # Tarball contains top-level python/ — extract into resources/ to create resources/python/
-curl -sSL "${URL}" | tar -xz -C "${ROOT_DIR}/src-tauri/resources/"
+curl -fSL "${URL}" | tar -xz -C "${ROOT_DIR}/src-tauri/resources/"
 
 echo "==> Staging py-scripts into resources..."
 mkdir -p "${PY_SCRIPTS_TARGET}"
@@ -73,8 +73,9 @@ if [ ! -f "${PYTHON_BIN}" ]; then
 fi
 
 cd "${ROOT_DIR}"
-"${PYTHON_BIN}" -m pip install --upgrade pip
-"${PYTHON_BIN}" -m pip install -r py-scripts/requirements.txt
+"${PYTHON_BIN}" -m ensurepip --upgrade 2>/dev/null || true
+"${PYTHON_BIN}" -m pip install --upgrade pip --no-warn-script-location 2>/dev/null || true
+"${PYTHON_BIN}" -m pip install --no-warn-script-location -r py-scripts/requirements.txt
 
 echo "==> Verifying Python runtime closure..."
 "${PYTHON_BIN}" -c "

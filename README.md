@@ -4,28 +4,7 @@ Stocksy Desktop is a cross-platform desktop app for multi-country DCF valuation.
 
 Design docs live at `docs/design/` when you need them.
 
-## Download & Install (macOS)
-
-No compilation, no `python3`, no source download needed — the `dmg` is self-contained (bundled `cpython-3.11.10` + `yfinance`).
-
-**1) Download:** [Releases → `Stocksy Desktop_0.1.0_aarch64.dmg`](https://github.com/alwynjoy/stocksy-app/releases) (Apple Silicon M1–M4; Intel `x86_64`/`universal` not in this release).
-
-**2) Install:** Open the `dmg` → drag `Stocksy Desktop.app` → `Applications` → eject the `dmg`.
-
-**3) First launch (ad-hoc, not notarized yet):** `Right-click` → `Open` → `Open`, or `System Settings → Privacy & Security → Open Anyway`. Terminal alternative:
-
-```bash
-xattr -d com.apple.quarantine /Applications/Stocksy\ Desktop.app
-open /Applications/Stocksy\ Desktop.app
-```
-
-Gatekeeper on Sequoia/Sonoma blocks unsigned `dmg`s — `Right-click → Open` bypasses it once. After that, launch from `Launchpad/Applications` normally.
-
-**What’s inside:** `Tauri 2.12` app + `Resources/python/bin/python3` (portable 3.11.10) + `site-packages` (`yfinance 1.4.1` 26 pinned) + `Resources/py-scripts/extractor_cli.py`. No host `python3`/`pip` needed; updates are via `Releases` (no auto-updater — `F8.5` removed).
-
-> **Build locally:** `bash scripts/setup-portable-python.sh && npm ci && npm run tauri build` → `src-tauri/target/release/bundle/dmg/*.dmg` + `.../macos/*.app`.
-
-## Prerequisites
+## Build Prerequisites
 
 Tauri CLI is per-project via `npm` — no global `cargo install tauri-cli`.
 
@@ -119,3 +98,17 @@ cargo check
 ```
 
 That's it — Help is a 4-tab guide and Settings holds 7 tabs including Queue & Parallelism; everything else is in the design docs.
+
+## Download & Install
+
+### macOS
+
+1. **Download:** [`Stocksy Desktop_0.1.0_aarch64.dmg`](https://github.com/alwynjoy/stocksy-app/releases) from [Releases](https://github.com/alwynjoy/stocksy-app/releases) (Apple Silicon M1–M4).
+2. **Install:** Open the `.dmg` and drag `Stocksy Desktop.app` to `Applications`.
+3. **First launch:** `Right-click` → `Open` → `Open` (or `System Settings → Privacy & Security → Open Anyway`).
+
+### Windows
+
+1. **Download:** [`Stocksy Desktop_0.1.0_x64-setup.exe`](https://github.com/alwynjoy/stocksy-app/releases) from [Releases](https://github.com/alwynjoy/stocksy-app/releases) (Windows 10/11 64-bit).
+2. **Install:** Run `Stocksy Desktop_0.1.0_x64-setup.exe` and follow the setup wizard.
+3. **First launch:** If Windows SmartScreen appears ("Windows protected your PC"), click **More info** → **Run anyway**.
