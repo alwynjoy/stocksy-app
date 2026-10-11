@@ -11,7 +11,28 @@ if [ -x "${TARGET_DIR}/bin/python3" ] || [ -f "${TARGET_DIR}/python.exe" ]; then
     mkdir -p "${PY_SCRIPTS_TARGET}"
     cp -f "${ROOT_DIR}/py-scripts/extractor_cli.py" "${PY_SCRIPTS_TARGET}/" 2>/dev/null || true
     cp -f "${ROOT_DIR}/py-scripts/yahoo_stock_extract.py" "${PY_SCRIPTS_TARGET}/" 2>/dev/null || true
-    exit 0
+    PYTHON_BIN="${TARGET_DIR}/bin/python3"
+    if [ ! -f "${PYTHON_BIN}" ]; then
+        PYTHON_BIN="${TARGET_DIR}/python.exe"
+    fi
+    echo "==> Verifying cached Python runtime closure..."
+    "${PYTHON_BIN}" -c "
+import yfinance as yf
+import pandas as pd
+import numpy as np
+import peewee
+import platformdirs
+import multitasking
+import bs4
+import curl_cffi
+import google.protobuf
+import websockets
+import pytz
+print('✓ Cached runtime verified!')
+" || { echo "✗ Cached runtime verification failed — re-running setup"; rm -rf "${TARGET_DIR}"; }
+    if [ -x "${TARGET_DIR}/bin/python3" ] || [ -f "${TARGET_DIR}/python.exe" ]; then
+        exit 0
+    fi
 fi
 
 ARCH="$(uname -m)"
@@ -54,5 +75,21 @@ fi
 cd "${ROOT_DIR}"
 "${PYTHON_BIN}" -m pip install --upgrade pip
 "${PYTHON_BIN}" -m pip install -r py-scripts/requirements.txt
+
+echo "==> Verifying Python runtime closure..."
+"${PYTHON_BIN}" -c "
+import yfinance as yf
+import pandas as pd
+import numpy as np
+import peewee
+import platformdirs
+import multitasking
+import bs4
+import curl_cffi
+import google.protobuf
+import websockets
+import pytz
+print('✓ All core modules successfully imported!')
+"
 
 echo "==> Portable Python successfully staged at ${TARGET_DIR}!"
