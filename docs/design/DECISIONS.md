@@ -1,6 +1,6 @@
 # DECISIONS — Stocksy Desktop
 
-Locked architectural rulings. Companion to `docs/design/00–07`. Any doc/spec conflict is
+Locked architectural rulings. Companion to `00`–`07` in this directory. Any doc/spec conflict is
 resolved by the ruling below (later decisions override earlier docs).
 
 | # | Decision | Ruling | Overrides |

@@ -15,6 +15,7 @@
 | **04 UI/UX Design** | 📝 Updated to match approved features |
 | **05 Configuration** | 📝 Updated to match approved features |
 | **06 Implementation Stages** | 📝 Updated to match approved features |
+| **DECISIONS** | 🔒 **Locked Rulings** (D1–D10) |
 
 ---
 
@@ -29,6 +30,7 @@
 | **05** | [Configuration](05_design_configuration.md) | **HOW** settings work | Yahoo Finance only. Cloud LLM (API key + Fetch Models). Local/Custom LLM (URL + key). Bundled Tavily + ScrapingDog (AI Agent Tools). Multiple system prompts. |
 | **06** | [Implementation Stages](06_implementation_stages.md) | **WHEN** we build | 10 stages, 18 weeks. Mapped features reflect Removals (F1.7 manual, F2.16 freshness, F4.3 Brave, F8.5 updater). |
 | **07** | [DCF Engine Appendix](07_design_dcf_engine_appendix.md) | **APPENDIX** deterministics | WACC/NI/terminal midpoints, seeds/settings migrations, pipeline streaming/retry/JSON-repair/cache/queue internals. |
+| **—** | [Architectural Decisions](DECISIONS.md) | **OVERRIDE** rulings | Locked rulings D1–D10; companion to docs 00–07. Resolves all doc/spec conflicts. |
 
 ---
 
