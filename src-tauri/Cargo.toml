@@ -1,0 +1,38 @@
+[package]
+name = "stocksy"
+version = "0.1.0"
+edition = "2021"
+description = "Stocksy Desktop — cross-platform DCF stock analyzer"
+authors = ["Al Joge"]
+license = "MIT"
+repository = "https://github.com/aljoge/stocksy-app"
+default-run = "stocksy"
+
+[lib]
+name = "stocksy"
+crate-type = ["rlib", "cdylib", "staticlib"]
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+tauri = { version = "2", features = [] }
+tauri-plugin-dialog = "2"
+tauri-plugin-fs = "2"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+rmp-serde = "1"
+rusqlite = { version = "0.32", features = ["bundled"] }
+dirs = "6"
+reqwest = { version = "0.12", default-features = false, features = ["json", "rustls-tls", "stream"] }
+chrono = "0.4"
+tokio = { version = "1", features = ["full"] }
+futures = "0.3"
+uuid = { version = "1", features = ["v4"] }
+
+[profile.release]
+panic = "abort"
+codegen-units = 1
+lto = true
+opt-level = "s"
+strip = true

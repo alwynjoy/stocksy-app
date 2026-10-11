@@ -1,0 +1,95 @@
+{
+  "company_info": {
+    "company_name": "Kotak Mahindra Bank Limited",
+    "ticker": "KOTAKBANK",
+    "exchange": "NSE",
+    "country": "India",
+    "sector": "Financial Services",
+    "industry": "Banks - Regional",
+    "currency_code": "INR",
+    "is_financial_services": true
+  },
+  "current_market_data": {
+    "current_price": 356.05,
+    "market_cap": 3562326400000,
+    "market_cap_category": "large-cap",
+    "price_date": "02/04/2026"
+  },
+  "market_parameters": {
+    "risk_free_rate": 0.0656,
+    "market_risk_premium": 0.0726,
+    "corporate_tax_rate": 0.3,
+    "nominal_gdp_growth": 0.08733
+  },
+  "financials": {
+    "beta": 1.2,
+    "historical_data": [
+      {
+        "fiscal_year_end": "12/31/2025",
+        "revenue": 786630000000,
+        "operating_income": null,
+        "ebitda": null,
+        "net_income": 187980000000,
+        "total_debt": 6072000000000,
+        "total_equity": 1680350000000,
+        "cash_equivalents": 639210000000,
+        "free_cash_flow": 179030000000
+      },
+      {
+        "fiscal_year_end": "03/2025",
+        "revenue": 762850000000,
+        "operating_income": null,
+        "ebitda": null,
+        "net_income": 221260000000,
+        "total_debt": 5923300000000,
+        "total_equity": 1574890000000,
+        "cash_equivalents": 790620000000,
+        "free_cash_flow": 179030000000
+      },
+      {
+        "fiscal_year_end": "03/2024",
+        "revenue": 696700000000,
+        "operating_income": null,
+        "ebitda": null,
+        "net_income": 181750000000,
+        "total_debt": 5203740000000,
+        "total_equity": 1299720000000,
+        "cash_equivalents": 652060000000,
+        "free_cash_flow": 123550000000
+      },
+      {
+        "fiscal_year_end": "03/2023",
+        "revenue": 518570000000.00006,
+        "operating_income": null,
+        "ebitda": null,
+        "net_income": 148850000000,
+        "total_debt": 4183069999999.9995,
+        "total_equity": 112510000000,
+        "cash_equivalents": 429260000000,
+        "free_cash_flow": 160460000000
+      },
+      {
+        "fiscal_year_end": "03/2022",
+        "revenue": 463410000000,
+        "operating_income": null,
+        "ebitda": null,
+        "net_income": 120490000000,
+        "total_debt": 3652350000000,
+        "total_equity": 971650000000,
+        "cash_equivalents": 468290000000,
+        "free_cash_flow": 117710000000
+      },
+      {
+        "fiscal_year_end": "03/2021",
+        "revenue": 426140000000,
+        "operating_income": null,
+        "ebitda": null,
+        "net_income": 99500000000,
+        "total_debt": 3266100000000,
+        "total_equity": 848390000000,
+        "cash_equivalents": 477170000000,
+        "free_cash_flow": 83050000000
+      }
+    ]
+  }
+}

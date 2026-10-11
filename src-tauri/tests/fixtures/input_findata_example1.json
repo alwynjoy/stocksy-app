@@ -1,0 +1,85 @@
+{
+  "company_info": {
+    "company_name": "Navin Fluorine International Limited",
+    "ticker": "NAVINFLUOR",
+    "exchange": "NSE",
+    "country": "India",
+    "sector": "Basic Materials",
+    "industry": "Chemicals",
+    "currency_code": "INR",
+    "is_financial_services": false
+  },
+  "current_market_data": {
+    "current_price": 7712,
+    "market_cap": 395520000000,
+    "market_cap_category": "mid-cap",
+    "price_date": "12/07/2026"
+  },
+  "market_parameters": {
+    "risk_free_rate": 0.0656,
+    "market_risk_premium": 0.0726,
+    "corporate_tax_rate": 0.3,
+    "nominal_gdp_growth": 0.08733
+  },
+  "financials": {
+    "beta": 0.69,
+    "historical_data": [
+      {
+        "fiscal_year_end": "03/2026",
+        "revenue": 33140000000,
+        "operating_income": 9320000000,
+        "ebitda": 11400000000,
+        "net_income": 6640000000,
+        "total_debt": 12720000000,
+        "total_equity": 39750000000,
+        "cash_equivalents": 230000000,
+        "free_cash_flow": 3370000000
+      },
+      {
+        "fiscal_year_end": "03/2025",
+        "revenue": 23300000000,
+        "operating_income": 4139999999.9999995,
+        "ebitda": 5750000000,
+        "net_income": 2890000000,
+        "total_debt": 14670000000,
+        "total_equity": 26260000000,
+        "cash_equivalents": 200000000,
+        "free_cash_flow": -1680000000
+      },
+      {
+        "fiscal_year_end": "03/2024",
+        "revenue": 20480000000,
+        "operating_income": 3040000000,
+        "ebitda": 4850000000,
+        "net_income": 2710000000,
+        "total_debt": 13690000000,
+        "total_equity": 23830000000,
+        "cash_equivalents": 70000000,
+        "free_cash_flow": -4179999999.9999995
+      },
+      {
+        "fiscal_year_end": "03/2023",
+        "revenue": 20650000000,
+        "operating_income": 4880000000,
+        "ebitda": 5820000000,
+        "net_income": 3750000000,
+        "total_debt": 8610000000,
+        "total_equity": 21850000000,
+        "cash_equivalents": 140000000,
+        "free_cash_flow": -3180000000
+      },
+      {
+        "fiscal_year_end": "03/2022",
+        "revenue": 14480000000,
+        "operating_income": 3090000000,
+        "ebitda": 3720000000,
+        "net_income": 2630000000,
+        "total_debt": 1210000000,
+        "total_equity": 18440000000,
+        "cash_equivalents": 760000000,
+        "free_cash_flow": -2960000000
+      }
+    ]
+  }
+}
+
