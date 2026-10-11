@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
 set -e
 
+export PYTHONUTF8=1
+export PYTHONIOENCODING=utf-8
+
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 ROOT_DIR="$(cd "${SCRIPT_DIR}/.." && pwd)"
 TARGET_DIR="${ROOT_DIR}/src-tauri/resources/python"
@@ -28,8 +31,8 @@ import curl_cffi
 import google.protobuf
 import websockets
 import pytz
-print('✓ Cached runtime verified!')
-" || { echo "✗ Cached runtime verification failed — re-running setup"; rm -rf "${TARGET_DIR}"; }
+print('[OK] Cached runtime verified!')
+" || { echo "[WARN] Cached runtime verification failed — re-running setup"; rm -rf "${TARGET_DIR}"; }
     if [ -x "${TARGET_DIR}/bin/python3" ] || [ -f "${TARGET_DIR}/python.exe" ]; then
         exit 0
     fi
@@ -90,7 +93,7 @@ import curl_cffi
 import google.protobuf
 import websockets
 import pytz
-print('✓ All core modules successfully imported!')
+print('[OK] All core modules successfully imported!')
 "
 
 echo "==> Portable Python successfully staged at ${TARGET_DIR}!"

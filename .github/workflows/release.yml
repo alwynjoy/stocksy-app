@@ -51,6 +51,9 @@ jobs:
 
       - name: Setup portable Python
         shell: bash
+        env:
+          PYTHONUTF8: '1'
+          PYTHONIOENCODING: 'utf-8'
         run: bash scripts/setup-portable-python.sh
 
       - name: Install frontend dependencies
