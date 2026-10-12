@@ -3,6 +3,11 @@
 Stocksy Desktop is a cross-platform desktop app for multi-country DCF valuation. It fetches financials from Yahoo Finance, lets a bundled Tavily search enrich forward estimates, and runs the full valuation deterministically in Rust — WACC, FCF, terminal value, scenarios, sensitivity and confidence — stored locally in SQLite.
 
 Design docs live at `docs/design/` when you need them.
+<img width="1106" height="940" alt="new-analysis" src="https://github.com/user-attachments/assets/2fcd978c-1084-4ff2-b765-095f05569265" />
+<img width="1126" height="940" alt="running-analysis" src="https://github.com/user-attachments/assets/47c5e4fa-42c7-4995-a574-17dd47c7f755" />
+<img width="1327" height="1005" alt="Screenshot 2026-10-12 at 5 56 24 PM" src="https://github.com/user-attachments/assets/eead8b60-24b1-4b67-a903-28c10840234e" />
+<img width="1319" height="995" alt="Screenshot 2026-10-12 at 5 57 05 PM" src="https://github.com/user-attachments/assets/2d6fb6a5-92b5-4458-b4fd-c4858f4757d6" />
+
 
 ## Build Prerequisites
 
