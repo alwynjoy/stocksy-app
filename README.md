@@ -97,8 +97,6 @@ cargo test             # 76 passed
 cargo check
 ```
 
-That's it — Help is a 4-tab guide and Settings holds 7 tabs including Queue & Parallelism; everything else is in the design docs.
-
 ## Download & Install
 
 ### macOS
@@ -112,3 +110,11 @@ That's it — Help is a 4-tab guide and Settings holds 7 tabs including Queue & 
 1. **Download:** [`Stocksy Desktop_0.1.0_x64-setup.exe`](https://github.com/alwynjoy/stocksy-app/releases) from [Releases](https://github.com/alwynjoy/stocksy-app/releases) (Windows 10/11 64-bit).
 2. **Install:** Run `Stocksy Desktop_0.1.0_x64-setup.exe` and follow the setup wizard.
 3. **First launch:** If Windows SmartScreen appears ("Windows protected your PC"), click **More info** → **Run anyway**.
+
+## Quick Setup
+
+1. **Add AI provider** — `Settings → LLM Provider` → pick any one (Anthropic / DeepSeek / OpenAI / Kimi / Custom) → paste API key → `Fetch Models` → choose model → `Save`.
+2. **Add Tavily** — register free at Tavily → `Settings → AI Tools` → paste Tavily key → `Save`. 1000 credits free ≈ 150 reports.
+3. **Analyze** — `New Analysis` → pick market → search ticker → `Analyze`.
+
+That's it — Help is a 4-tab guide and Settings holds 7 tabs including Queue & Parallelism; everything else is in the design docs.
